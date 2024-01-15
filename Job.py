@@ -1,48 +1,49 @@
-from Calendario import Calendario
+from Calendar import Calendar
 
 class Job:
-    def __init__(self, nombre, tipo, calendario):
-        self._nombre = nombre
-        self._tipo = tipo
-        self._estado = "N/A"
-        self._calendario = calendario
+    def __init__(self, name, type, calendar):
+        self._name = name
+        self._type = type
+        self._status = None
+        self._calendar = calendar
+        self._application = None
     
     @property
-    def nombre(self):
-        return self._nombre    
+    def application(self):
+        return self._application
     
-    @nombre.setter
-    def nombre(self, nuevo_nombre):
-        self._nombre = nuevo_nombre
-    
-    @property
-    def tipo(self):
-        return self._tipo
-    
-    @tipo.setter
-    def tipo(self, nuevo_tipo):
-        self._tipo = nuevo_tipo
+    @application.setter
+    def application(self, nueva_application):
+        self._application = nueva_application
     
     @property
-    def estado(self):
-        return self._estado
+    def name(self):
+        return self._name    
     
-    @estado.setter
-    def estado(self, nuevo_estado):
-        self._estado = nuevo_estado
+    @name.setter
+    def name(self, new_name):
+        self._name = new_name
+    
+    @property
+    def type(self):
+        return self._type
+    
+    @type.setter
+    def type(self, new_type):
+        self._type = new_type
+    
+    @property
+    def status(self):
+        return self._status
+    
+    @status.setter
+    def status(self, new_status):
+        self._status = new_status
 
     @property
-    def calendario(self):
-        return self._calendario
+    def calendar(self):
+        return self._calendar
     
-    @calendario.setter
-    def calendario(self, nuevo_calendario):
-        self._calendario = nuevo_calendario
-        
-
-# Crear una instancia de la clase Persona
-calendario = Calendario("Semanal")
-job1 = Job("JOB01AB", "os", calendario)
-
-# Llamar a un método de la instancia
-print(f"El calendario del job {job1.nombre} es {job1.calendario.nombre}")
+    @calendar.setter
+    def calendar(self, new_calendar):
+        self._calendar = new_calendar
