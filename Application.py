@@ -1,5 +1,4 @@
 from Job import Job
-from Calendar import Calendar
 
 class Application:
     def __init__(self, name):
